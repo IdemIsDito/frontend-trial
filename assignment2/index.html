@@ -6,13 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
 		<link href="style.css" rel="stylesheet" />
-		<link href="dbAutocomplete.css" rel="stylesheet" />
+		<link href="dbAutocomplete.css" rel="stylesheet" />	
 	</head>
 	<body>
 		<form action="https://www.deskbookers.com/search" method="get" class="form-horizontal search">
 			<div class="form-group">
 				<div class="col-sm-8">
-					<input type="text" name="q" id="search-field" class="form-control" placeholder="Search for a city" />
+					<input type="text" name="q" id="search-field" class="form-control" placeholder="Search for a city" autocomplete="false"/>
 				</div>
 				<div class="col-sm-4">
 					<input type="submit" class="btn btn-primary" value="Search" />
@@ -25,11 +25,11 @@
 		<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="jquery.dbAutocomplete.js"></script>
 		<script type="text/javascript">
-		// Use plugin
-		jQuery(document).ready(function($)
-		{
-			$('#search-field').dbAutocomplete();
-		});
+		$(function() {
+      $('#search-field').dbAutocomplete({
+        url: 'https://www.deskbookers.com/en-gb/sa2.json'
+      });
+    });
 		</script>
 	</body>
 </html>

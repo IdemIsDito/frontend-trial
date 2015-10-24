@@ -1,1 +1,23 @@
-
+.suggestions {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #c0c0c0;
+  border-radius: 0 0 8px 8px;
+  margin-top: 8px;
+  width: 382px;
+}
+.suggestions-item {
+  padding: 6px 12px;
+  border-top: 1px solid #F9F9F9;
+  cursor: pointer;
+}
+.suggestions-item:last-child {
+  border-radius: 0 0 8px 8px;
+}
+.suggestions-item:hover {
+  background: #f1f1f1;
+}
+.suggestions-item-empty:hover {
+  background: #fff;
+  cursor: default;
+}
